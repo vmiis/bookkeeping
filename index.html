@@ -108,7 +108,7 @@ $(document).ready(function(){
 		text=text.replace(/__HOST__\//g,$vm.hosting_path+'/');
 		text=text.replace(/__VER__/g,$vm.version);
 		text=text.replace(/__IMAGE__\//g,$vm.image_path+'/');
-		if(window.location.toString().indexOf('test=1')!=-1){
+		if(window.location.toString().indexOf('runat=local')!=-1){
 			//use latest unstable version (master branch, not gh-pages branch)
 			text=text.replace('https://vmiis.github.io/api','https://raw.githubusercontent.com/vmiis/api/master');
 			text=text.replace('https://vmiis.github.io/framework','https://raw.githubusercontent.com/vmiis/framework/master');
