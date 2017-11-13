@@ -9,6 +9,7 @@ $List2.val(y);
 //---------------------------------------------
 _fields="Item,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,Sub Total|Total";
 //-------------------------------------
+$('#D__ID').on('load',function(){_set_req(); _request_data();})
 $('#aquery__ID').on('click',function(){_set_req(); _request_data();})
 //-------------------------------------
 var data_process=function(data_records){
@@ -61,14 +62,18 @@ var data_process=function(data_records){
 }
 //-------------------------------------
 _data_process=function(){
-    $vm.alert('Working hard...');
+    _records=data_process(_records);
+    _simple_render();
+    /*
+    //$vm.alert('Working hard...');
     var r=_records;
     _records=[];
     setTimeout(function(){
         _records=data_process(r);
         _simple_render();
-        $vm.close_alert();
+        //$vm.close_alert();
     }, 100);
+    */
 }
 //-------------------------------------
 _set_req=_set_req_export=function(){
@@ -76,10 +81,11 @@ _set_req=_set_req_export=function(){
     _req={cmd:'query_records',sql:sql,i1:$('#YY__ID').val()}
 }
 //-------------------------------------
-var _request_data_export=function(){
+_export_records=function(){ //overwrite default export
+    _set_req();
     $VmAPI.request({data:_req,callback:function(res){
         _records=data_process(res.records);
-        _export_data(_filename);
+        $vm.download_csv({name:_filename,data:_records,fields:_fields});
     }})
 }
 //-------------------------------------
