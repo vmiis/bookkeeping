@@ -71,7 +71,7 @@
         }
         //---------------------------------------------
 		if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-			//$('#form__ID').parent().prepend('#form__ID');
+			$('#form__ID').parent().prepend($('#form__ID'));
 		}
 		//---------------------------------------------
     </script>
@@ -152,6 +152,7 @@
 		#navbars__ID .navbar-nav li.nav-item a.nav-link:hover {
 			color: #18BC9C;
 			outline: none;
+			background-color: rgba(183, 193, 193, 0.15);
 		}
 		#navbars__ID .navbar-nav li.nav-item a.nav-link:active,
 		#navbars__ID .navbar-nav li.nav-item a.nav-link:focus {
@@ -172,6 +173,7 @@
 		}
 		#navbars__ID .dropdown-item:hover {
 			color: #18BC9C;
+			background-color: #ddd;
 		}
 
 		@media (min-width: 992px) {

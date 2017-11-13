@@ -1,4 +1,4 @@
-3 database table are used in this applications
+3 database tables are used in this application
 
 20007172, transactions table id
 20005380, predefined transaction item table id
