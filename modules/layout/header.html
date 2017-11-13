@@ -70,6 +70,10 @@
             $('#username__ID').text('Signed in as '+ $vm.user);
         }
         //---------------------------------------------
+		if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+			//$('#form__ID').parent().prepend('#form__ID');
+		}
+		//---------------------------------------------
     </script>
     <style>
         #header__ID{
@@ -86,7 +90,7 @@
 	        padding-top:30px;
         }
 		#navbars__ID .dropdown-menu{
-			background-color:#f0f0f0;
+			background-color:#fff;
 		}
         .large_logo__ID{
             color:#fff;
@@ -117,8 +121,8 @@
             #navbars__ID{
     	        padding-top:0px;
                 padding-left:10px;
+				padding-right: 10px;
 				background-color:#445a26;
-				padding-bottom: 320px;
             }
             .small_logo__ID{
                 color:#fff;
