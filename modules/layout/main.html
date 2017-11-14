@@ -170,6 +170,7 @@ VmInclude:/modules/layout/footer.html
 			if($vm.js_jquery_ui==1 && $vm.search_list==1){
 				clearInterval(search_loop);
 				set_module_search();
+				console.log((new Date().getTime()-$vm.start_time).toString()+"---"+"********************* search module is ready ************************");
 			}
 		},100);
 		//------------------------------------
