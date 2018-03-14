@@ -9,4 +9,4 @@ https://vmiis.github.io/bookkeeping/index.html?database=production
 20005380, predefined transaction item table id  
 20010377, business intelligence, monthly aggregation table id  
 
-You need to replace these 3 table id in main.json with yours table id.  
+You need to replace these 3 table id in bookkeeping/index.json with yours table id.  
